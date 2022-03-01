@@ -41,8 +41,31 @@ Dichiariamo chi ha vinto.
 */
 
 const evenOrOdd = prompt(`Pari o dispari?`);
-const userNum = parseInt(prompt(`Inserisci un numero da 1 a 5:`))
+const userNum = parseInt(prompt(`Inserisci un numero da 1 a 5:`));
 
-const pcNumber = Math.floor(Math.random() * 5) + 1;
+console.log(evenOrOdd);
+console.log(userNum);
+
+const pcNumber = generateRandomBetween(1, 5);
+
+console.log(pcNumber);
+
+const sum = userNum + pcNumber;
+
+console.log(sum);
+
+function generateRandomBetween(min, max) {
+    
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    return randomNumber;
+}
+
+function isEven(number) {
+    
+}
+
+
+
 
 

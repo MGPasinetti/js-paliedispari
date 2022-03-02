@@ -4,30 +4,30 @@ Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 */
 
-// const userWord = prompt(`Inserisci una parola:`);
+const userWord = prompt(`Inserisci una parola:`);
 
-// console.log(userWord);
-
-// console.log(reverse(userWord));
+console.log(userWord);
 
 
-// if (isPalindrome(userWord, reverse(userWord))) {
-//     alert(`La parola inserita è PALINDROMA`);
-// } else {
-//     alert(`La parola inserita non è palindroma`);
-// }
+if (isPalindrome(userWord)) {
+    alert(`La parola inserita è PALINDROMA`);
+} else {
+    alert(`La parola inserita non è palindroma`);
+}
 
-// function isPalindrome(word, wordReverse) {
-//     if (word === wordReverse) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
 
-// function reverse(s){
-//     return [...s].reverse().join("");
-// }
+function isPalindrome(word) {
+    let reverseWord = ``;
+    for (let i = 0; i < word.length; i++) {
+        reverseWord = word[i] + reverseWord;
+    }
+
+    if (word == reverseWord) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 
 
@@ -40,32 +40,29 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 
-const evenOrOdd = prompt(`Pari o dispari?`);
-const userNum = parseInt(prompt(`Inserisci un numero da 1 a 5:`));
+// const evenOrOdd = prompt(`Pari o dispari?`);
+// const userNum = parseInt(prompt(`Inserisci un numero da 1 a 5:`));
 
-console.log(evenOrOdd);
-console.log(userNum);
+// console.log(evenOrOdd);
+// console.log(userNum);
 
-const pcNumber = generateRandomBetween(1, 5);
+// const pcNumber = generateRandomBetween(1, 5);
 
-console.log(pcNumber);
+// console.log(pcNumber);
 
-const sum = userNum + pcNumber;
+// const sum = userNum + pcNumber;
 
-console.log(sum);
+// console.log(sum);
 
-function generateRandomBetween(min, max) {
+// function generateRandomBetween(min, max) {
     
-    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+//     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    return randomNumber;
-}
+//     return randomNumber;
+// }
 
-function isEven(number) {
+// function isEven(number) {
     
-}
-
-
-
+// }
 
 

@@ -4,30 +4,30 @@ Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 */
 
-const userWord = prompt(`Inserisci una parola:`);
+// const userWord = prompt(`Inserisci una parola:`);
 
-console.log(userWord);
-
-
-if (isPalindrome(userWord)) {
-    alert(`La parola inserita è PALINDROMA`);
-} else {
-    alert(`La parola inserita non è palindroma`);
-}
+// console.log(userWord);
 
 
-function isPalindrome(word) {
-    let reverseWord = ``;
-    for (let i = 0; i < word.length; i++) {
-        reverseWord = word[i] + reverseWord;
-    }
+// if (isPalindrome(userWord)) {
+//     alert(`La parola inserita è PALINDROMA`);
+// } else {
+//     alert(`La parola inserita non è palindroma`);
+// }
 
-    if (word == reverseWord) {
-        return true;
-    } else {
-        return false;
-    }
-}
+
+// function isPalindrome(word) {
+//     let reverseWord = ``;
+//     for (let i = 0; i < word.length; i++) {
+//         reverseWord = word[i] + reverseWord;
+//     }
+
+//     if (word == reverseWord) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
 
 
@@ -40,29 +40,46 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 
-// const evenOrOdd = prompt(`Pari o dispari?`);
-// const userNum = parseInt(prompt(`Inserisci un numero da 1 a 5:`));
+const evenOrOdd = prompt(`Pari o dispari?`).toLowerCase();
+const userNum = parseInt(prompt(`Inserisci un numero da 1 a 5:`));
 
-// console.log(evenOrOdd);
-// console.log(userNum);
+console.log(evenOrOdd);
+console.log(userNum);
 
-// const pcNumber = generateRandomBetween(1, 5);
+const pcNumber = generateRandomBetween(1, 5);
 
-// console.log(pcNumber);
+console.log(pcNumber);
 
-// const sum = userNum + pcNumber;
+const sum = userNum + pcNumber;
 
-// console.log(sum);
+console.log(sum);
 
-// function generateRandomBetween(min, max) {
-    
-//     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+let result;
 
-//     return randomNumber;
-// }
+if (isEven(sum)) {
+    result = `pari`;
+} else {
+    result = `dispari`;
+}
 
-// function isEven(number) {
-    
-// }
+if (evenOrOdd == result) {
+    console.log(`Hai vinto`);
+} else {
+    console.log(`Hai perso`);
+}
+
+
+// FUNCTIONS:
+function generateRandomBetween(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function isEven(number) {
+    if (number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 

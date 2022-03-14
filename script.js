@@ -40,46 +40,31 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 
-const evenOrOdd = prompt(`Pari o dispari?`).toLowerCase();
+const userChoice = prompt(`PARI o DISPARI?`);
 const userNum = parseInt(prompt(`Inserisci un numero da 1 a 5:`));
+console.log(userChoice, userNum);
 
-console.log(evenOrOdd);
-console.log(userNum);
+const randomNum = generateRandomNum(1, 5);
+console.log(`random number:`, randomNum);
 
-const pcNumber = generateRandomBetween(1, 5);
+let sum = userNum + randomNum;
+console.log(`totale:`, sum);
 
-console.log(pcNumber);
-
-const sum = userNum + pcNumber;
-
-console.log(sum);
 
 let result;
+isEven(sum);
 
-if (isEven(sum)) {
-    result = `pari`;
-} else {
-    result = `dispari`;
+console.log(result);
+
+(userChoice === result) ? console.log(`Hai vinto`) : console.log(`Hai perso`)
+
+// FUNCTIONS
+function generateRandomNum(min, max) {
+	return Math.floor(Math.random() * max) + min; 
 }
 
-if (evenOrOdd == result) {
-    console.log(`Hai vinto`);
-} else {
-    console.log(`Hai perso`);
-}
-
-
-// FUNCTIONS:
-function generateRandomBetween(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function isEven(number) {
-    if (number % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
+function isEven(num) {
+	(num % 2 === 0) ? result = `pari` : result = `dispari`;
 }
 
 
